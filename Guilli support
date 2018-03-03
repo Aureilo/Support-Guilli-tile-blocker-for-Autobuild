@@ -1,0 +1,335 @@
+# main event
+country_event = {
+	id = autobuild.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		num_owned_planets > 0
+		or = {
+			is_ai = no
+			and = {
+				has_global_flag = autobuild_ai_allowed
+				not = {
+					is_country_type = primitive
+				}
+			}
+		}
+		not = {
+			has_country_flag = autobuild_empire_block
+		}
+	}
+
+	immediate = {
+		# set_timed_country_flag = {
+		# 	flag = autobuild_empire_block
+		# 	days = 90
+		# }
+		# start local events
+		every_owned_planet = {
+			autobuild_effect_planet_build = yes
+		}
+		# semi cheat options
+		# auto clean
+		if = {
+			limit = {
+				or = {
+					has_country_flag = autobuild_10
+					and = {
+						is_ai = yes
+						has_global_flag = autobuild_ai_allowed
+					}
+				}
+				or = {
+					has_ascension_perk = ap_mastery_of_nature
+					and = {
+						energy > 100
+					  minerals > 100
+						autobuild_trigger_cost = yes
+						autobuild_trigger_cost_energy = yes
+					}
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					autobuild_trigger_planet_block = no
+					has_blocker = yes
+				}
+				every_tile = {
+					limit = {
+						has_blocker = yes
+					}
+										if = {
+						limit = {
+							has_blocker = tb_Ruined_Battlefield
+							owner = {
+								energy > 100
+                						minerals = 100
+							}
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+                						add_mineral = -66.0
+								else = {
+									add_energy = -100
+                  							add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+					if = {
+						limit = {
+							has_blocker = tb_Spaceship_Graveyard
+							owner = {
+								energy > 100
+								mineral > 350							
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -231.0
+								else = {
+									add_energy = -100
+									add_mineral = -350
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+					if = {
+						limit = {
+							has_blocker = tb_Toxic_Gas
+							owner = {
+								energy > 100
+								mineral > 100							
+								has_technology = tech_c_tb_Toxic_Gas
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+          				if = {
+						limit = {
+							has_blocker = tb_Locust_Plagues
+							owner = {
+								energy > 100
+								mineral > 100							
+								has_technology = tech_c_tb_Locust_Plagues
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Seasonal Flooding
+							owner = {
+								energy > 100
+								mineral > 100							
+								has_technology = tech_c_tb_Seasonal Flooding
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Ice_Flora
+							owner = {
+								energy > 100
+								mineral > 100							
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Planetwide_Forest
+							owner = {
+								energy > 30
+								mineral > 30				
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -15.0
+								add_mineral = -15.0
+								else = {
+									add_energy = -30
+									add_mineral = -30
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+             				if = {
+						limit = {
+							has_blocker = tb_Dense_Forests
+							owner = {
+								energy > 30
+								mineral > 30					
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -15.0
+								add_mineral = -15.0
+								else = {
+									add_energy = -30
+									add_mineral = -30
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Proto_Forests
+							owner = {
+								energy > 100
+								mineral > 100							
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Arachnophobia
+							owner = {
+								energy > 100
+								mineral > 100							
+								has_technology = tech_c_tb_Arachnophobia
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Dunes
+							owner = {
+								energy > 100
+								mineral > 100							
+								has_technology = tech_c_tb_Dunes
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -66.0
+								add_mineral = -66.0
+								else = {
+									add_energy = -100
+									add_mineral = -100
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+              				if = {
+						limit = {
+							has_blocker = tb_Mushroom_Forest
+							owner = {
+								energy > 20
+								mineral > 20					
+						}
+						owner = {
+							if = {
+								limit = {
+									has_ascension_perk = ap_mastery_of_nature
+								}
+								add_energy = -10.0
+								add_mineral = -10.0
+								else = {
+									add_energy = -20
+									add_mineral = -20
+								}
+							}
+						}
+						remove_blocker = yes
+					}
+				}
+			}
+		}		
+						
