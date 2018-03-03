@@ -1,0 +1,7 @@
+#
+
+# for planet
+autobuild_effect_mod_api = {
+	planet_event = { id = autobuild_guili_patch.0 }
+	#log = "autobuild gpm patch"
+}
