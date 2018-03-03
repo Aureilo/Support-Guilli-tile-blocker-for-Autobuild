@@ -7,20 +7,18 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		autobuild_trigger_planet_block = no
 		has_blocker = yes
+		autobuild_trigger_planet_block = no
 		exists owner
 		owner = {
 			or = {
-				has_country_flag = autobuild_10
+				has_country_flag = autobuild_clean_blockers
 				and = {
 					is_ai = yes
 					has_global_flag = autobuild_ai_allowed
 				}
 			}
 			energy > 100
-			minerals > 100
-			autobuild_trigger_cost = yes
 			autobuild_trigger_cost_energy = yes
 		}
 	}
@@ -92,7 +90,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-                	if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Unusual_Formations
 					owner = {
@@ -113,7 +111,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-          		if = {
+          	if = {
 				limit = {
 					has_blocker = c_tb_Locust_Plagues
 					owner = {
@@ -134,7 +132,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-            		if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Seasonal_Flooding
 					owner = {
@@ -155,7 +153,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-            		if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Ice_Flora
 					owner = {
@@ -175,7 +173,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-            		if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Planetwide_Forest
 					owner = {
@@ -195,7 +193,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-            		if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Dense_Forests
 					owner = {
@@ -215,8 +213,8 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-             
-            		if = {
+            
+            if = {
 				limit = {
 					has_blocker = c_tb_Proto_Forests
 					owner = {
@@ -236,7 +234,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-            		if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Arachnophobia
 					owner = {
@@ -257,7 +255,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-            		if = {
+            if = {
 				limit = {
 					has_blocker = c_tb_Dunes
 					owner = {
@@ -278,7 +276,7 @@ planet_event = {
 				}
 				remove_blocker = yes
 			}
-           	 	if = {
+           	if = {
 				limit = {
 					has_blocker = c_tb_Mushroom_Forest
 					owner = {
